@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("images/turtleHandGliding.png"); /* Path to your image */
+  background-size: cover; /* Scale the image to cover the entire background */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the image */
+}
+
+#section-input-username {
+  margin-left: 25px;
+}
+
+#section-input-password {
+  margin-top: 5px;
+}
+
+#form-login {
+  border: 0.5px solid #e1e1e1;
+  border-radius: 10px;
+  width: 260px;
+  height: 200px;
+  padding: 20px;
+  margin-top: 200px;
+  background-color: rgba(169, 169, 169, 0.7);
+}
+
+#section-input-number {
+  margin-top: 22px;
+  margin-left: 6px;
+}
+
+#number-input-label {
+  font-family: "Times New Roman";
+}
+
+#form-header {
+  font-weight: 100;
+  font-size: 25px;
+  font-family: serif, "Times New Roman", Arial;
+  margin: 6px 6px;
+}
+
+#submit-number {
+  border: 2px solid #1976d2;
+  color: #1976d2;
+  width: 75px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 8px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 34px;
+  background-color: white;
+  box-shadow: none;
+}
+
+#number-input {
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
+  width: 95%;
+  height: 20px;
+  margin: 8px 0px;
+}
+
+#map {
+  height: 180px;
+}
+
+/*When screen width < 300 px*/
+@media (max-width: 300px) {
+  #form1 {
+    width: 80%;
+  }
+}

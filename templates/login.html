@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="LoginStyle.css" />
+  </head>
+  <body>
+    <img src="\images\turtleParagliding.png" alt="" />
+    <form id="form-login" action="">
+      <h2 style="margin: auto; margin-left: 34px; font-size: 27px">
+        Touch The Cloud
+      </h2>
+      <h1 id="form-header">Login</h1>
+      <div id="section-input-number">
+        <div id="section-input-username">
+          <label id="email-input-label" for="email-input">email:</label>
+          <input
+            id="email-input"
+            type="email"
+            min="11"
+            placeholder="user@gmail.com"
+          />
+        </div>
+
+        <div id="section-input-password">
+          <label id="password-input-label" for="password-input"
+            >password:</label
+          >
+          <input id="password-input" type="text" min="11" placeholder="1212" />
+        </div>
+        <br />
+      </div>
+      <button id="submit-number" onclick="isValid(event)">Submit</button>
+    </form>
+    <script src="scriptLogin.js"></script>
+  </body>
+</html>

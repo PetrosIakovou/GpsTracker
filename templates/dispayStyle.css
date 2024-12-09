@@ -1,0 +1,37 @@
+body {
+  visibility: hidden;
+}
+
+#logoutButton {
+  position: absolute; /* Use absolute positioning */
+  top: 10px; /* Adjust the vertical position */
+  right: 10px; /* Move it to the right */
+  padding: 10px 20px; /* Add some padding for better appearance */
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+#logoutButton:hover {
+  background-color: #007bff; /* Darker shade on hover */
+}
+
+#toggleButton {
+  background-color: #007bff;
+  border-radius: 20px; /* Rounded corners */
+  height: 45px;
+  width: 45px;
+  border: 0.5px solid #e1e1e1;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  text-align: center;
+}
