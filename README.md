@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is an aviation application for free flight pilot's (paragliding , handgliding ...). A GPS unit attached to the pilot exposes flight data (position, altitude, ground speed, flight direction and other) to a UI so other co-pilots be able to monitor the pilot's flight in real time.
+This project is an aviation application for free flight pilot's (paragliding , handgliding ...). A GPS unit attached to the pilot exposes flight data (position, altitude, ground speed, flight direction and other) to a UI so other co-pilots be able to monitor on a map the pilot's flight in real time.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
