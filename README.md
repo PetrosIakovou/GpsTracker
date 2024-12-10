@@ -77,11 +77,16 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+This project is an aviation application for free flight pilot's (paragliding , handgliding ...). A GPS unit attached to the pilot exposes flight data (position, altitude, ground speed, flight direction and other) to a UI so other co-pilots be able to monitor the pilot's flight in real time.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+## Architectural diagram 
+<div align="center">
+  <a href="https://github.com/PetrosIakovou/GpsTracker.git">
+    <img src="Architectural Diagram.png" alt="Logo" width="500" height="500">
+  </a>
+</div>div>
 
 ### Built With
 
@@ -90,7 +95,6 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 * ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 * ![Flask](https://img.shields.io/badge/Flask-lightgrey?style=flat&logo=flask&logoColor=white)
 * ![C++](https://img.shields.io/badge/C%2B%2B-blue?style=flat&logo=cplusplus&logoColor=white)
-* ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
 * ![WebSocket](https://img.shields.io/badge/WebSocket-blue?style=flat&logo=socketdotio&logoColor=white)
 * ![Socket.IO](https://img.shields.io/badge/Socket.IO-black?style=flat&logo=socketdotio&logoColor=white)
 * ![HTTP Request](https://img.shields.io/badge/HTTP%20Request-brightgreen?style=flat&logo=apache&logoColor=white)
