@@ -62,7 +62,7 @@ This project is an aviation application for free flight pilot's (paragliding , h
 </div>
 
 ## Description of Architecture
-
+In progress ...
 ### Built With
 
 * ![Python](https://img.shields.io/badge/python-blue?style=flat&logo=python&logoColor=white)
@@ -92,14 +92,14 @@ This project is an aviation application for free flight pilot's (paragliding , h
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
+In progress ...
 
 
 ### Prerequisites
-
+In progress ...
 
 ### Installation
-
+In progress ...
 
 
 
