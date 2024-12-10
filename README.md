@@ -1,3 +1,3 @@
 <div align="center">
-  GPS TRACKER
+  <b> GPS TRACKER </b>
 </div>
