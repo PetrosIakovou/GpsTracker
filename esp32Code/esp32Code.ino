@@ -11,16 +11,10 @@
 
 #define GPS_BAUD 9600
 
-// WiFi credentials
-//const char* ssid = "Wind WiFi E065D0";
-//const char* password = "88DBTB7AF6";
-// HotSpot
-const char* ssid = "Petros";
-const char* password = "12344321";
+const char* ssid = "WiFi name";
+const char* password = "Password";
 
-//String serverEndpoint = "http://160.40.48.11:4000/data"; //eketa
-//String serverEndpoint = "http://192.168.1.100:4000/data"; //spiti
-String serverEndpoint = "http://160.40.48.227:4000/data"; //HotSpot
+String serverEndpoint = "http://<Server's ip>:4000/data"; 
 
 
 // WebSocket server on port 81
@@ -97,22 +91,21 @@ void loop() {
 }
 
 void sentToServer() {
-    // Here you can execute any other non-blocking tasks.
-    // For example, you can blink an LED or do sensor readings.
+
     static unsigned long lastTime = 0;
     if (millis() - lastTime >= 1000) {
-        // Execute your periodic tasks here
+
         getData();
         dataJSON =convertToJson();
         Serial.println(dataJSON);
 
-        // Send data immediately after generating JSON
+        // Send data  after generating JSON
         if (WiFi.status() == WL_CONNECTED) {
           HTTPClient http;
 
           // Start a POST request
           http.begin(serverEndpoint);
-          http.addHeader("Content-Type", "application/json"); // Specify content type
+          http.addHeader("Content-Type", "application/json"); 
 
           int httpResponseCode = http.POST(dataJSON);
 
@@ -167,15 +160,15 @@ void getData(){
   }
   //Get course
   if (gps.course.isUpdated()){
-    course = gps.course.deg(); // Speed in km/h 
+    course = gps.course.deg(); 
   }
   //Get altitude
   if (gps.altitude.isUpdated()){
-    altitude = gps.altitude.meters(); // Speed in km/h 
+    altitude = gps.altitude.meters(); 
   }
   //Get satellites
   if (gps.satellites.isUpdated()){
-    satellites = gps.satellites.value(); // Speed in km/h 
+    satellites = gps.satellites.value();
   }
 }
 

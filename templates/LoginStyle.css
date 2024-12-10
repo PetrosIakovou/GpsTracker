@@ -2,10 +2,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-image: url("images/turtleHandGliding.png"); /* Path to your image */
-  background-size: cover; /* Scale the image to cover the entire background */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-position: center; /* Center the image */
+  background-image: url("images/turtleHandGliding.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #section-input-username {

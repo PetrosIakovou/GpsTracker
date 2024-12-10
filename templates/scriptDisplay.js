@@ -1,7 +1,6 @@
 // Connect to the WebSocket server
 //var socket = io.connect('http://' + document.domain + ':' + location.port);
-//var socket = io.connect("http://192.168.1.100:4000"); //spiti
-var socket = io.connect("http://160.40.48.227:4000"); // hotspot
+var socket = io.connect("http://<Server's ip>:4000"); // hotspot
 
 // Initial placeholder coordinates
 var map = L.map("map");
@@ -13,8 +12,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 // Establish a WebSocket connection to the ESP32
-//const esp32Socket = new WebSocket("ws://192.168.1.2:81"); // Replace with your ESP32's IP and port. this ip in my home
-const esp32Socket = new WebSocket("ws://192.168.24.113:81"); // Replace with your ESP32's IP and port. this ip in HOTSPOT
+const esp32Socket = new WebSocket("ws://<The ip of EPS32>:81"); // Replace with your ESP32's IP and port
 
 const toggleButton = document.getElementById("toggleButton");
 
@@ -103,7 +101,7 @@ socket.on("update_data", function (data) {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Connect to the WebSocket server
-  var socket = io.connect("http://160.40.48.227:4000");
+  var socket = io.connect("http://<Server's ip>:4000");
 
   // Request data from the server periodically (every 5 seconds)
   setInterval(function () {
@@ -153,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     satellitesCell.innerText = data.satellites || "No data";
     newRow.appendChild(satellitesCell);
 
-    // Check if there are already 5 rows in the table
+    // Check if there are already 3 rows in the table
     if (tbody.rows.length >= 3) {
       console.log("More than 5 rows, removing the oldest row...");
 

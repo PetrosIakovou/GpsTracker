@@ -12,16 +12,15 @@ from flask_cors import CORS
 
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # This is necessary for using sessions
 print(f"Secret key is: {app.secret_key}")
-#CORS(app)  # Enable CORS for all routes
-#CORS(app, resources={r"/*": {"origins": ["http://127.0.0.1:5500", "http://192.168.1.100:4000"]}})
-CORS(app, resources={r"/*": {"origins": ["http://127.0.0.1:5500", "http://160.40.48.227:4000"]}})
+CORS(app, resources={r"/*": {"origins": ["http://127.0.0.1:5500", "http://<Server's ip>:4000"]}})
 
 socketio = SocketIO(app, cors_allowed_origins="*")
+
 # Global variables to store data
 stored_data = {}
 
+#Add values to data base manually
 @app.route('/addvalue/', methods=['GET'])
 def addvalue():
 
@@ -55,6 +54,7 @@ def addvalue():
     
     return "ok"
 
+#Take values from database
 @app.route('/getvalues/', methods=['GET'])
 def getvalues():
 
@@ -101,26 +101,13 @@ def handle_request_data():
         'satellites': satellites
     })
 
-
+#Display values to browser
 @app.route('/display')
 def display():
-    
-    # Get data 
-   # timestamp = stored_data.get('timestamp', 'Not found')
-    #date = stored_data.get('date', 'Not found')
-    #latitude = stored_data.get('latitude', 'Not found')
-    #longitude = stored_data.get('longitude', 'Not found')
-    #velocity = stored_data.get('velocity', 'Not found')
-    #course = stored_data.get('course', 'Not found')
-    #altitude = stored_data.get('altitude', 'Not found')
-    #satellites = stored_data.get('satellites', 'Not found')
-
-   
-    
-    #return render_template('display.html', title='Κόμβος 12345', timestamp = timestamp, latitude = latitude, longitude = #longitude,  altitude = altitude, velocity = velocity, course = course, satellites = satellites)
 
     return render_template('display.html', title='Κόμβος 12345')
 
+#Push data to the data base
 @app.route('/data', methods=['POST'])
 def receive_data():
     try:
@@ -171,14 +158,5 @@ def receive_data():
         print(f"Error: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
 
-
-
-
-   
-       
-
-#if __name__ == '__main__':
-#    app.run(host='0.0.0.0', port='4000')++++++++++
 if __name__ == '__main__':
-   # socketio.run(app, host='192.168.1.100', port=4000, debug=True) #spiti
-   socketio.run(app, host='160.40.48.227', port=4000, debug=True) 
+   socketio.run(app, host="<Server's ip>", port=4000, debug=True) 
